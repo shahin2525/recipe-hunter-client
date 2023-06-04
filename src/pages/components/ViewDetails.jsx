@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import RecipesDetails from "./RecipesDetails";
 
 const ViewDetails = () => {
   const chef = useLoaderData();
@@ -32,10 +33,10 @@ const ViewDetails = () => {
           <p>Year Of Experience: {yearsOfExperience}</p>
         </div>
       </div>
-      <h1 className="text-center font-bold text-3xl">My Recipes</h1>
-      <div>
+      <h1 className="text-center font-bold text-3xl pt-3">My Recipes</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-5 pt-5 pb-1">
         {recipes.map((recipe) => (
-          <p></p>
+          <RecipesDetails key={recipe._id} recipe={recipe}></RecipesDetails>
         ))}
       </div>
     </div>
