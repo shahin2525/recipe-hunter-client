@@ -17,10 +17,13 @@ const ViewDetails = () => {
   console.log(chef);
   return (
     <div className="bg-red-200  px-10 py-5">
-      <div className="card w-auto bg-red-100 shadow-xl my-4 mx-auto">
+      <div
+        style={{ height: "1050px" }}
+        className="card w-auto bg-red-100  my-4 mx-auto"
+      >
         <figure>
           <img
-            className="rounded-3xl pt-5 pb-3 mt-5"
+            className="rounded-3xl  mb-4 mt-10"
             src={chefImageURL}
             alt="Shoes"
           />

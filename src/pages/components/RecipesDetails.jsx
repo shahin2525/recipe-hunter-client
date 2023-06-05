@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import "@smastrom/react-rating/style.css";
+import { Rating } from "@smastrom/react-rating";
+
 const RecipesDetails = ({ recipe }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const notify = () => {
@@ -17,7 +20,7 @@ const RecipesDetails = ({ recipe }) => {
   return (
     <div>
       <div
-        style={{ height: "720px" }}
+        style={{ height: "780px" }}
         className="card w-96 bg-base-100 shadow-xl  relative"
       >
         <figure className="px-10 pt-10">
@@ -36,6 +39,16 @@ const RecipesDetails = ({ recipe }) => {
             <span className=" text-lg font-bold">Cooking-Method: </span>
             {cookingMethod}
           </p>
+          <div className="grid grid-cols-2 font-bold text-xl mb-8 pb-4">
+            <p>Rating</p>
+            <Rating
+              className=""
+              style={{ maxWidth: 180 }}
+              value={rating}
+              readOnly
+            />
+          </div>
+
           <div className="card-actions absolute  bottom-2">
             <button
               className="btn btn-primary"
