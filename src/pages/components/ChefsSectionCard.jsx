@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const ChefsSectionCard = ({ chef }) => {
-  console.log(chef);
+  // console.log(chef);
   const {
     chefImageURL,
     chefName,
