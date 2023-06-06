@@ -4,7 +4,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-console.log(import.meta.env.VITE_SOME_KEY);
+
 const firebaseConfig = {
   apiKey: "AIzaSyBI7mk0xrJMCc0B96RMYCsjigClexU9t5I",
   authDomain: "recipe-garden-client.firebaseapp.com",

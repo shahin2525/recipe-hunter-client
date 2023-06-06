@@ -10,6 +10,8 @@ import Login from "../pages/components/Login";
 
 import RegisterLayout from "../layouts/RegisterLayout";
 import Register from "../pages/components/Register";
+import BlogLayout from "../layouts/BlogLayout";
+import Blog from "../pages/components/Blog";
 
 const router = createBrowserRouter([
   {
@@ -52,6 +54,16 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+    ],
+  },
+  {
+    path: "/blog",
+    element: <BlogLayout></BlogLayout>,
+    children: [
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
     ],
   },

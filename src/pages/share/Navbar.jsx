@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -8,21 +8,32 @@ const Navbar = () => {
         <a className="btn btn-ghost normal-case text-xl">Recipe-Garden</a>
       </div>
       <div className=" flex-col md:flex-row mx-auto my-0">
-        <Link to="/" className="btn btn-ghost normal-case text-xl">
+        <NavLink
+          to="/"
+          className={({ isActive }) =>
+            isActive
+              ? "text-orange-500 btn btn-ghost normal-case text-xl"
+              : "btn btn-ghost normal-case text-xl"
+          }
+        >
           Home
-        </Link>
-        <Link to="/blog" className="btn btn-ghost normal-case text-xl">
+        </NavLink>
+        <NavLink
+          to="/blog"
+          className={({ isActive }) =>
+            isActive
+              ? "text-orange-500 btn btn-ghost normal-case text-xl"
+              : "btn btn-ghost normal-case text-xl"
+          }
+        >
           Blog
-        </Link>
+        </NavLink>
       </div>
-      {/* <div className="flex-auto">
-        <Link to="/blog" className="btn btn-ghost normal-case text-xl">
-          Blog
-        </Link>
-      </div> */}
 
       <div className="flex-start gap-2">
-        <button>login</button>
+        <button>
+          <Link to="/login">login</Link>
+        </button>
         <button>logOut</button>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">

@@ -28,7 +28,7 @@ const ViewDetails = () => {
             alt="Shoes"
           />
         </figure>
-        <div className="card-body ml-24 pl-20 font-bold">
+        <div className="card-body ml-40 pl-24 font-bold">
           <h2 className="card-title text-2xl font-bold">Name: {chefName}</h2>
           <p>Short-Bio-Data: {shortBio}</p>
           <p>Likes: {numOfLikes}</p>
