@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const Login = () => {
+  const [error, setError] = useState("");
+  const { login } = useContext(AuthContext);
   const handleLogin = (event) => {
     event.preventDefault();
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    login(email, password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => {
+        const message = error.message;
+        setError(message);
+      });
   };
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -15,6 +27,7 @@ const Login = () => {
         <div className="text-center">
           <h1 className="text-5xl font-bold">Login now!</h1>
         </div>
+        <p>{error}</p>
         <form
           onSubmit={handleLogin}
           className="card  w-96 shadow-2xl bg-base-100"
