@@ -12,6 +12,7 @@ import RegisterLayout from "../layouts/RegisterLayout";
 import Register from "../pages/components/Register";
 import BlogLayout from "../layouts/BlogLayout";
 import Blog from "../pages/components/Blog";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: ":id",
-        element: <ViewDetails></ViewDetails>,
+        element: (
+          <PrivateRoutes>
+            <ViewDetails></ViewDetails>
+          </PrivateRoutes>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:3000/chefs/${params.id}`),
       },
