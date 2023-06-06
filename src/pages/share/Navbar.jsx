@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
+  console.log(user);
+
+  // setUserImage(image);
   const handleLogOut = () => {
     logOut()
       .then()
@@ -12,6 +15,7 @@ const Navbar = () => {
         console.log(message);
       });
   };
+
   return (
     <div className="navbar bg-rose-100 flex-col md:flex-row bold">
       <div className="">
@@ -50,20 +54,19 @@ const Navbar = () => {
           </button>
         )}
 
-        <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-            <div className="w-10 rounded-full">
-              <img src="/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+        <div className="">
+          {user && (
+            <div className="w-10 ">
+              <img
+                className=" group-hover:opacity-75 rounded-full"
+                src={user?.photoURL}
+                alt=""
+              />
+              <span className="ml-2 hidden group-hover:block">
+                {user?.displayName}
+              </span>
             </div>
-          </label>
-          <ul
-            tabIndex={0}
-            className="mt-3 p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
-          >
-            <li>
-              <a>Logout</a>
-            </li>
-          </ul>
+          )}
         </div>
       </div>
     </div>
