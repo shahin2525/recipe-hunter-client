@@ -4,7 +4,7 @@ const BranchSection = () => {
   return (
     <div style={{ backgroundColor: "#F8F6F4" }} className="pb-6 px-4  md:px-14">
       {/* className="bg-red-100" */}
-      <h1 className="text-center font-extrabold text-4xl pt-10 mb-7">
+      <h1 className="text-center font-extrabold text-4xl pt-10 mb-8">
         Our Branches
       </h1>
       <div className=" grid grid-cols-1 md:grid-cols-3 gap-6">

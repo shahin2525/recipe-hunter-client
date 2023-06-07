@@ -2,23 +2,23 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-300 text-base-content">
+    <footer className="footer p-10 bg-base-300 text-base-content font-bold">
       <div>
-        <span className="footer-title">Services</span>
-        <a className="link link-hover">Branding</a>
-        <a className="link link-hover">Design</a>
-        <a className="link link-hover">Marketing</a>
-        <a className="link link-hover">Advertisement</a>
+        <span className="footer-title text-xl">Services</span>
+        <a className="link link-hover">Online-Order</a>
+        <a className="link link-hover">Cataring</a>
+        <a className="link link-hover">Home-Delebary</a>
+        <a className="link link-hover">Event-Management</a>
       </div>
       <div>
-        <span className="footer-title">Company</span>
+        <span className="footer-title text-xl">Info</span>
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </div>
       <div>
-        <span className="footer-title">Social</span>
+        <span className="footer-title text-xl">Social</span>
         <div className="grid grid-flow-col gap-4">
           <a>
             <svg
