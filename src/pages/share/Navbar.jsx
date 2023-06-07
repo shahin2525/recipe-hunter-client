@@ -56,15 +56,15 @@ const Navbar = () => {
 
         <div className="">
           {user && (
-            <div className="w-10 ">
+            <div
+              className=" tooltip tooltip-left w-10"
+              data-tip={user?.displayName}
+            >
               <img
                 className=" group-hover:opacity-75 rounded-full"
                 src={user?.photoURL}
                 alt=""
               />
-              <span className="ml-2 hidden group-hover:block">
-                {user?.displayName}
-              </span>
             </div>
           )}
         </div>
