@@ -38,7 +38,9 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/chefs/${params.id}`),
+          fetch(
+            `https://recipe-garden-server-shahin2525.vercel.app/chefs/${params.id}`
+          ),
       },
     ],
   },

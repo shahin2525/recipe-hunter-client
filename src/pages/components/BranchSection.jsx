@@ -2,7 +2,7 @@ import React from "react";
 
 const BranchSection = () => {
   return (
-    <div style={{ backgroundColor: "#F8F6F4" }} className="pb-6 px-4  md:px-14">
+    <div style={{ backgroundColor: "#F8F6F4" }} className="pb-6 px-4  md:px-12">
       {/* className="bg-red-100" */}
       <h1 className="text-center font-extrabold text-4xl pt-10 mb-8">
         Our Branches
