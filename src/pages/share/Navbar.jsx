@@ -4,7 +4,7 @@ import { AuthContext } from "../../provider/AuthProvider";
 
 const Navbar = () => {
   const { logOut, user } = useContext(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   // setUserImage(image);
   const handleLogOut = () => {

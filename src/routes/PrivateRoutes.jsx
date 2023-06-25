@@ -8,7 +8,7 @@ const PrivateRoutes = ({ children }) => {
   if (loading) {
     return <span className="loading loading-spinner text-error"></span>;
   }
-  if (user) {
+  if (user?.email) {
     return children;
   }
   return <Navigate to="/login" state={{ from: location }} replace></Navigate>;
